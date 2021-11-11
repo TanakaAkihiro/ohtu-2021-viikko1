@@ -1,7 +1,9 @@
+#Tämä on ihan turha rivi, jonka pituus on yli sata merkkiä, jotta pylint huomaa virheen: Line too longggggggggg
 class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
         if tilavuus > 0.0:
-            self.tilavuus = tilavuus
+            if not tilavuus <= 0.0:
+                self.tilavuus = tilavuus
         else:
             # virheellinen, nollataan
             self.tilavuus = 0.0
@@ -15,6 +17,15 @@ class Varasto:
         else:
             # täyteen ja ylimäärä hukkaan!
             self.saldo = tilavuus
+        turha = 0
+        turha = 1
+        turha = 2
+        turha = 3
+        turha = 4
+        turha += turha + 1
+        turha += turha + 1
+        turha += turha + 1
+        turha += turha + 1
 
     # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
